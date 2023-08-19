@@ -1,21 +1,20 @@
-{
-  "friendly_name": "EmuatorJS",
-  "image_src": "blob:https://kasmregistry.linuxserver.io/2860dd39-b6c3-458e-a865-1c1a5f8bfe60",
-  "description": "EmulatorJS for playing emulated rom games",
-  "name": "linuxserver/emulatorjs:latest",
-  "cores": 2,
-  "memory": 2768,
-  "gpu_count": 0,
-  "cpu_allocation_method": "Inherit",
-  "docker_registry": "https://index.docker.io/v1/",
-  "categories": [
-    "Games"
-  ],
-  "require_gpu": false,
-  "enabled": true,
-  "image_type": "Container",
-  "architecture": [
-    "amd64",
-    "arm64"
-  ]
+/** @type {import('next').NextConfig} */
+
+const nextConfig = {
+  env: {
+    name: 'Kasm Technologies',
+    description: 'The official store for Kasm supported workspaces.',
+    icon: '/img/logo.svg',
+    listUrl: 'https://registry.kasmweb.com/',
+    contactUrl: 'https://kasmweb.com/support',
+  },
+  reactStrictMode: true,
+  swcMinify: true,
+  basePath: '/kasm-registry/1.0',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  }
 }
+
+module.exports = nextConfig
